@@ -1,20 +1,21 @@
 import Vue from 'vue';
-import Router from 'vue-router';
+import { IonicVueRouter } from '@modus/ionic-vue';
 import routes from 'vue-auto-routing';
 import { createRouterLayout } from 'vue-router-layout';
 
-Vue.use(Router);
+Vue.use(IonicVueRouter);
 
-const RouterLayout = createRouterLayout(layout => {
-  return import('@/layouts/' + layout + '.vue');
+// 悲しみ
+// const RouterLayout = createRouterLayout((layout) => {
+//   return import('@/layouts/' + layout + '.vue');
+// });
+
+export default new IonicVueRouter({
+  // @see node_modules/@modus/ionic-vue/src/router.ts
+  direction: 1,
+  viewCount: 0,
+  mode: 'history',
+  routes: routes.map((route) => {
+    return { ...route, path: '/' + route.path };
+  }),
 });
-
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      component: RouterLayout,
-      children: routes
-    }
-  ]
-})
