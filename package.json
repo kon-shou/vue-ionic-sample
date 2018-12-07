@@ -15,18 +15,21 @@
     "@capacitor/ios": "^1.0.0-beta.11",
     "@ionic/core": "^4.0.0-beta.17",
     "@modus/ionic-vue": "^1.1.1",
+    "axios": "^0.18.0",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.0.1",
     "vue-router-layout": "^0.1.2",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-class": "^0.3.1",
+    "vuex-type-helper": "^1.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.0",
     "@vue/cli-plugin-typescript": "^3.2.0",
     "@vue/cli-service": "^3.2.0",
-    "typescript": "^3.0.0",
+    "typescript": "3.0.3",
     "vue-auto-routing": "^0.3.0",
     "vue-cli-plugin-auto-routing": "^0.2.1",
     "vue-template-compiler": "^2.5.17"
